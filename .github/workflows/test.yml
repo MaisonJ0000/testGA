@@ -24,4 +24,4 @@ jobs:
           key: npm-packages-${{ hashFiles('**/a.txt') }}
 
       - run: |
-          cat bbb/ccc/cache.txt
+          cat bbb/ccc/kk/cache.txt
