@@ -20,7 +20,7 @@ jobs:
       - name: Cache node modules
         uses: actions/cache@v2
         with:
-          path: '**/kk'
+          path: kk
           key: npm-packages-${{ hashFiles('**/a.txt') }}
 
       - run: |
