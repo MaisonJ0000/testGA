@@ -1,11 +1,13 @@
-name: test
+name: ci_test
 
 on:
   push:
     branches: [master]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  test:
+  ci_test:
     name: test
     runs-on: ubuntu-latest
 
