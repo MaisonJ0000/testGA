@@ -1,0 +1,27 @@
+name: ci_test
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16'
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: kk
+          key: npm-packages-${{ hashFiles('**/a.txt') }}
+
+      - run: |
+          node test.js
