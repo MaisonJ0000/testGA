@@ -24,7 +24,4 @@ jobs:
           key: npm-packages-${{ hashFiles('**/a.txt') }}
 
       - run: |
-          cat bbb/ccc/kk/cache.txt
-
-      - run: |
           node test.js
